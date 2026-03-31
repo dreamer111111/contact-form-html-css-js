@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+
+  <body>
+    <main>
+      <div id="success-state" class="success-state" role="alert" hidden>
+        <h2>Message Sent!</h2>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+
+      <form action="#" novalidate class="contact-form" id="contact-form">
+        <h1 class="title">Contact Us</h1>
+
+        <div class="form-group-flex">
+          <div class="form-control">
+            <label for="first-name"
+              >First Name <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              required
+              aria-describedby="first-name-error"
+            />
+            <p id="first-name-error" class="error-msg" hidden>
+              This field is required
+            </p>
+          </div>
+
+          <div class="form-control">
+            <label for="last-name"
+              >Last Name <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              required
+              aria-describedby="last-name-error"
+            />
+            <p id="last-name-error" class="error-msg" hidden>
+              This field is required
+            </p>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label for="email"
+            >Email Address <span aria-hidden="true">*</span></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            aria-describedby="email-error"
+          />
+          <p id="email-error" class="error-msg" hidden>
+            Please enter a valid email address
+          </p>
+        </div>
+
+        <fieldset class="form-control">
+          <legend>Query Type <span aria-hidden="true">*</span></legend>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input
+                type="radio"
+                id="general-enquiry"
+                name="query-type"
+                value="General-Enquiry"
+                required
+              />
+              <label for="general-enquiry">General Enquiry</label>
+            </div>
+
+            <div class="radio-option">
+              <input
+                type="radio"
+                id="support-request"
+                name="query-type"
+                value="Support-Request"
+              />
+              <label for="support-request">Support Request</label>
+            </div>
+          </div>
+          <p id="query-error" class="error-msg" hidden>
+            Please select a query type
+          </p>
+        </fieldset>
+
+        <div class="form-control">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea
+            name="message"
+            id="message"
+            required
+            aria-describedby="message-error"
+          ></textarea>
+          <p id="message-error" class="error-msg" hidden>
+            This field is required
+          </p>
+        </div>
+
+        <div class="form-control checkbox-group">
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            required
+            aria-describedby="consent-error"
+          />
+          <label for="consent"
+            >I consent to being contacted by the team
+            <span aria-hidden="true">*</span></label
+          >
+        </div>
+        <p id="consent-error" class="error-msg" hidden>
+          To submit this form, please consent to being contacted
+        </p>
+
+        <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
+      </form>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
